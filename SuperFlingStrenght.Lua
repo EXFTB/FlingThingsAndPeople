@@ -12,7 +12,7 @@ local Debris = game:GetService("Debris")
 Workspace.ChildAdded:Connect(function(NewModel)
 	if NewModel.Name == "GrabParts" then
 		local PartToImpulse = NewModel["GrabPart"]["WeldConstraint"].Part1
-		if PartToImpulse then --Part found
+		if PartToImpulse then --//Part found
 			local VelocityObject = Instance.new("BodyVelocity", PartToImpulse)
 			NewModel:GetPropertyChangedSignal("Parent"):Connect(function()
 				if not NewModel.Parent then
